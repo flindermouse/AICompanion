@@ -1,0 +1,152 @@
+{
+	"version": "0.2.0",
+	"configurations": [
+		{
+			"name": "Launch AICompanion (Debug)",
+			"request": "launch",
+			"program": "C:\\Users\\flour\\Documents\\Unreal Projects\\AICompanion\\Binaries\\Win64\\UnrealGame-Win64-Debug.exe",
+			"preLaunchTask": "AICompanion Win64 Debug Build",
+			"args": [
+			],
+			"cwd": "C:\\Program Files\\Epic Games\\UE_5.0",
+			"stopAtEntry": false,
+			"console": "externalTerminal",
+			"type": "cppvsdbg",
+			"visualizerFile": "C:\\Program Files\\Epic Games\\UE_5.0\\Engine\\Extras\\VisualStudioDebugging\\Unreal.natvis",
+			"sourceFileMap": {
+				"D:\build\++UE5\Sync": "C:\\Program Files\\Epic Games\\UE_5.0"
+			}
+		},
+		{
+			"name": "Launch AICompanion (DebugGame)",
+			"request": "launch",
+			"program": "C:\\Users\\flour\\Documents\\Unreal Projects\\AICompanion\\Binaries\\Win64\\UnrealGame-Win64-DebugGame.exe",
+			"preLaunchTask": "AICompanion Win64 DebugGame Build",
+			"args": [
+			],
+			"cwd": "C:\\Program Files\\Epic Games\\UE_5.0",
+			"stopAtEntry": false,
+			"console": "externalTerminal",
+			"type": "cppvsdbg",
+			"visualizerFile": "C:\\Program Files\\Epic Games\\UE_5.0\\Engine\\Extras\\VisualStudioDebugging\\Unreal.natvis",
+			"sourceFileMap": {
+				"D:\build\++UE5\Sync": "C:\\Program Files\\Epic Games\\UE_5.0"
+			}
+		},
+		{
+			"name": "Launch AICompanion (Development)",
+			"request": "launch",
+			"program": "C:\\Users\\flour\\Documents\\Unreal Projects\\AICompanion\\Binaries\\Win64\\UnrealGame.exe",
+			"preLaunchTask": "AICompanion Win64 Development Build",
+			"args": [
+			],
+			"cwd": "C:\\Program Files\\Epic Games\\UE_5.0",
+			"stopAtEntry": false,
+			"console": "externalTerminal",
+			"type": "cppvsdbg",
+			"visualizerFile": "C:\\Program Files\\Epic Games\\UE_5.0\\Engine\\Extras\\VisualStudioDebugging\\Unreal.natvis",
+			"sourceFileMap": {
+				"D:\build\++UE5\Sync": "C:\\Program Files\\Epic Games\\UE_5.0"
+			}
+		},
+		{
+			"name": "Launch AICompanion (Test)",
+			"request": "launch",
+			"program": "C:\\Users\\flour\\Documents\\Unreal Projects\\AICompanion\\Binaries\\Win64\\UnrealGame-Win64-Test.exe",
+			"preLaunchTask": "AICompanion Win64 Test Build",
+			"args": [
+			],
+			"cwd": "C:\\Program Files\\Epic Games\\UE_5.0",
+			"stopAtEntry": false,
+			"console": "externalTerminal",
+			"type": "cppvsdbg",
+			"visualizerFile": "C:\\Program Files\\Epic Games\\UE_5.0\\Engine\\Extras\\VisualStudioDebugging\\Unreal.natvis",
+			"sourceFileMap": {
+				"D:\build\++UE5\Sync": "C:\\Program Files\\Epic Games\\UE_5.0"
+			}
+		},
+		{
+			"name": "Launch AICompanion (Shipping)",
+			"request": "launch",
+			"program": "C:\\Users\\flour\\Documents\\Unreal Projects\\AICompanion\\Binaries\\Win64\\UnrealGame-Win64-Shipping.exe",
+			"preLaunchTask": "AICompanion Win64 Shipping Build",
+			"args": [
+			],
+			"cwd": "C:\\Program Files\\Epic Games\\UE_5.0",
+			"stopAtEntry": false,
+			"console": "externalTerminal",
+			"type": "cppvsdbg",
+			"visualizerFile": "C:\\Program Files\\Epic Games\\UE_5.0\\Engine\\Extras\\VisualStudioDebugging\\Unreal.natvis",
+			"sourceFileMap": {
+				"D:\build\++UE5\Sync": "C:\\Program Files\\Epic Games\\UE_5.0"
+			}
+		},
+		{
+			"name": "Launch AICompanionEditor (Debug)",
+			"request": "launch",
+			"program": "C:\\Program Files\\Epic Games\\UE_5.0\\Engine\\Binaries\\Win64\\UnrealEditor-Win64-Debug.exe",
+			"preLaunchTask": "AICompanionEditor Win64 Debug Build",
+			"args": [
+				"C:\\Users\\flour\\Documents\\Unreal Projects\\AICompanion\\AICompanion.uproject"
+			],
+			"cwd": "C:\\Program Files\\Epic Games\\UE_5.0",
+			"stopAtEntry": false,
+			"console": "externalTerminal",
+			"type": "cppvsdbg",
+			"visualizerFile": "C:\\Program Files\\Epic Games\\UE_5.0\\Engine\\Extras\\VisualStudioDebugging\\Unreal.natvis",
+			"sourceFileMap": {
+				"D:\build\++UE5\Sync": "C:\\Program Files\\Epic Games\\UE_5.0"
+			}
+		},
+		{
+			"name": "Launch AICompanionEditor (DebugGame)",
+			"request": "launch",
+			"program": "C:\\Program Files\\Epic Games\\UE_5.0\\Engine\\Binaries\\Win64\\UnrealEditor-Win64-DebugGame.exe",
+			"preLaunchTask": "AICompanionEditor Win64 DebugGame Build",
+			"args": [
+				"C:\\Users\\flour\\Documents\\Unreal Projects\\AICompanion\\AICompanion.uproject"
+			],
+			"cwd": "C:\\Program Files\\Epic Games\\UE_5.0",
+			"stopAtEntry": false,
+			"console": "externalTerminal",
+			"type": "cppvsdbg",
+			"visualizerFile": "C:\\Program Files\\Epic Games\\UE_5.0\\Engine\\Extras\\VisualStudioDebugging\\Unreal.natvis",
+			"sourceFileMap": {
+				"D:\build\++UE5\Sync": "C:\\Program Files\\Epic Games\\UE_5.0"
+			}
+		},
+		{
+			"name": "Launch AICompanionEditor (Development)",
+			"request": "launch",
+			"program": "C:\\Program Files\\Epic Games\\UE_5.0\\Engine\\Binaries\\Win64\\UnrealEditor.exe",
+			"preLaunchTask": "AICompanionEditor Win64 Development Build",
+			"args": [
+				"C:\\Users\\flour\\Documents\\Unreal Projects\\AICompanion\\AICompanion.uproject"
+			],
+			"cwd": "C:\\Program Files\\Epic Games\\UE_5.0",
+			"stopAtEntry": false,
+			"console": "externalTerminal",
+			"type": "cppvsdbg",
+			"visualizerFile": "C:\\Program Files\\Epic Games\\UE_5.0\\Engine\\Extras\\VisualStudioDebugging\\Unreal.natvis",
+			"sourceFileMap": {
+				"D:\build\++UE5\Sync": "C:\\Program Files\\Epic Games\\UE_5.0"
+			}
+		},
+		{
+			"name": "Generate Project Files",
+			"type": "coreclr",
+			"request": "launch",
+			"program": "C:\\Program Files\\Epic Games\\UE_5.0\\Engine\\Binaries\\DotNET\\UnrealBuildTool\\UnrealBuildTool",
+			"args": [
+				"-projectfiles",
+				"-vscode",
+				"-project=C:\\Users\\flour\\Documents\\Unreal Projects\\AICompanion\\AICompanion.uproject",
+				"-game",
+				"-engine"
+			],
+			"console": "externalTerminal",
+			"stopAtEntry": false,
+			"cwd": "C:\\Program Files\\Epic Games\\UE_5.0"
+		}
+	]
+}

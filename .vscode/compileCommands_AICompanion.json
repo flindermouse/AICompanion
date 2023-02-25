@@ -1,0 +1,57 @@
+[
+	{
+		"file": "C:\\Users\\flour\\Documents\\Unreal Projects\\AICompanion\\Source\\AICompanion\\AICompanion.Build.cs",
+		"command": "\"C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.34.31933\\bin\\HostX64\\x64\\cl.exe\" @\"C:\\Users\\flour\\Documents\\Unreal Projects\\AICompanion\\.vscode\\compileCommands_AICompanion\\AICompanion.211.rsp\"",
+		"directory": "C:\\Program Files\\Epic Games\\UE_5.0\\Engine\\Source"
+	},
+	{
+		"file": "C:\\Users\\flour\\Documents\\Unreal Projects\\AICompanion\\Source\\AICompanion\\AICompanion.cpp",
+		"command": "\"C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.34.31933\\bin\\HostX64\\x64\\cl.exe\" @\"C:\\Users\\flour\\Documents\\Unreal Projects\\AICompanion\\.vscode\\compileCommands_AICompanion\\AICompanion.211.rsp\"",
+		"directory": "C:\\Program Files\\Epic Games\\UE_5.0\\Engine\\Source"
+	},
+	{
+		"file": "C:\\Users\\flour\\Documents\\Unreal Projects\\AICompanion\\Source\\AICompanion\\AICompanion.h",
+		"command": "\"C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.34.31933\\bin\\HostX64\\x64\\cl.exe\" @\"C:\\Users\\flour\\Documents\\Unreal Projects\\AICompanion\\.vscode\\compileCommands_AICompanion\\AICompanion.211.rsp\"",
+		"directory": "C:\\Program Files\\Epic Games\\UE_5.0\\Engine\\Source"
+	},
+	{
+		"file": "C:\\Users\\flour\\Documents\\Unreal Projects\\AICompanion\\Source\\AICompanion\\AICompanionCharacter.cpp",
+		"command": "\"C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.34.31933\\bin\\HostX64\\x64\\cl.exe\" @\"C:\\Users\\flour\\Documents\\Unreal Projects\\AICompanion\\.vscode\\compileCommands_AICompanion\\AICompanion.211.rsp\"",
+		"directory": "C:\\Program Files\\Epic Games\\UE_5.0\\Engine\\Source"
+	},
+	{
+		"file": "C:\\Users\\flour\\Documents\\Unreal Projects\\AICompanion\\Source\\AICompanion\\AICompanionCharacter.h",
+		"command": "\"C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.34.31933\\bin\\HostX64\\x64\\cl.exe\" @\"C:\\Users\\flour\\Documents\\Unreal Projects\\AICompanion\\.vscode\\compileCommands_AICompanion\\AICompanion.211.rsp\"",
+		"directory": "C:\\Program Files\\Epic Games\\UE_5.0\\Engine\\Source"
+	},
+	{
+		"file": "C:\\Users\\flour\\Documents\\Unreal Projects\\AICompanion\\Source\\AICompanion\\AICompanionGameMode.cpp",
+		"command": "\"C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.34.31933\\bin\\HostX64\\x64\\cl.exe\" @\"C:\\Users\\flour\\Documents\\Unreal Projects\\AICompanion\\.vscode\\compileCommands_AICompanion\\AICompanion.211.rsp\"",
+		"directory": "C:\\Program Files\\Epic Games\\UE_5.0\\Engine\\Source"
+	},
+	{
+		"file": "C:\\Users\\flour\\Documents\\Unreal Projects\\AICompanion\\Source\\AICompanion\\AICompanionGameMode.h",
+		"command": "\"C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.34.31933\\bin\\HostX64\\x64\\cl.exe\" @\"C:\\Users\\flour\\Documents\\Unreal Projects\\AICompanion\\.vscode\\compileCommands_AICompanion\\AICompanion.211.rsp\"",
+		"directory": "C:\\Program Files\\Epic Games\\UE_5.0\\Engine\\Source"
+	},
+	{
+		"file": "C:\\Users\\flour\\Documents\\Unreal Projects\\AICompanion\\Source\\AICompanion\\Companion.cpp",
+		"command": "\"C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.34.31933\\bin\\HostX64\\x64\\cl.exe\" @\"C:\\Users\\flour\\Documents\\Unreal Projects\\AICompanion\\.vscode\\compileCommands_AICompanion\\AICompanion.211.rsp\"",
+		"directory": "C:\\Program Files\\Epic Games\\UE_5.0\\Engine\\Source"
+	},
+	{
+		"file": "C:\\Users\\flour\\Documents\\Unreal Projects\\AICompanion\\Source\\AICompanion\\Companion.h",
+		"command": "\"C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.34.31933\\bin\\HostX64\\x64\\cl.exe\" @\"C:\\Users\\flour\\Documents\\Unreal Projects\\AICompanion\\.vscode\\compileCommands_AICompanion\\AICompanion.211.rsp\"",
+		"directory": "C:\\Program Files\\Epic Games\\UE_5.0\\Engine\\Source"
+	},
+	{
+		"file": "C:\\Users\\flour\\Documents\\Unreal Projects\\AICompanion\\Source\\AICompanion\\CompanionController.cpp",
+		"command": "\"C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.34.31933\\bin\\HostX64\\x64\\cl.exe\" @\"C:\\Users\\flour\\Documents\\Unreal Projects\\AICompanion\\.vscode\\compileCommands_AICompanion\\AICompanion.211.rsp\"",
+		"directory": "C:\\Program Files\\Epic Games\\UE_5.0\\Engine\\Source"
+	},
+	{
+		"file": "C:\\Users\\flour\\Documents\\Unreal Projects\\AICompanion\\Source\\AICompanion\\CompanionController.h",
+		"command": "\"C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.34.31933\\bin\\HostX64\\x64\\cl.exe\" @\"C:\\Users\\flour\\Documents\\Unreal Projects\\AICompanion\\.vscode\\compileCommands_AICompanion\\AICompanion.211.rsp\"",
+		"directory": "C:\\Program Files\\Epic Games\\UE_5.0\\Engine\\Source"
+	}
+]

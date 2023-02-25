@@ -1,0 +1,15 @@
+{
+    "configurations": [
+        {
+            "name": "AICompanionEditor Editor Win64 Development (AICompanion)",
+            "intelliSenseMode": "msvc-x64",
+            "compileCommands": "C:\\Users\\flour\\Documents\\Unreal Projects\\AICompanion\\.vscode\\compileCommands_AICompanion.json"
+        },
+        {
+            "name": "Win32",
+            "intelliSenseMode": "msvc-x64",
+            "compileCommands": "C:\\Users\\flour\\Documents\\Unreal Projects\\AICompanion\\.vscode\\compileCommands_Default.json"
+        }
+    ],
+    "version": 4
+}
