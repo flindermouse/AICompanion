@@ -32,3 +32,7 @@ void ACompanion::SetupPlayerInputComponent(UInputComponent* PlayerInputComponent
 
 }
 
+float ACompanion::DoSomeDamage(){
+	UE_LOG(LogTemp, Display, TEXT("Attacking!"));
+	return baseDamage;
+}

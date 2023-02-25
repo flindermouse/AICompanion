@@ -7,6 +7,7 @@
 #include "GameFramework/CharacterMovementComponent.h"
 #include "GameFramework/Controller.h"
 #include "GameFramework/SpringArmComponent.h"
+#include "Kismet/GameplayStatics.h"
 
 //////////////////////////////////////////////////////////////////////////
 // AAICompanionCharacter
@@ -126,4 +127,19 @@ void AAICompanionCharacter::MoveRight(float Value)
 		// add movement in that direction
 		AddMovementInput(Direction, Value);
 	}
+}
+
+void AAICompanionCharacter::ClearCommands(){
+	Tags.Empty();
+}
+
+void AAICompanionCharacter::CommandWait(){
+		
+	Tags.Empty();
+	Tags.Add(FName("Wait"));
+}
+
+void AAICompanionCharacter::CommandReturn(){
+	Tags.Empty();
+	Tags.Add(FName("Return"));
 }

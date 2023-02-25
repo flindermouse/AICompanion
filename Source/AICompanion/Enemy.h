@@ -4,16 +4,17 @@
 
 #include "CoreMinimal.h"
 #include "GameFramework/Pawn.h"
-#include "Companion.generated.h"
+
+#include "Enemy.generated.h"
 
 UCLASS()
-class AICOMPANION_API ACompanion : public APawn
+class AICOMPANION_API AEnemy : public APawn
 {
 	GENERATED_BODY()
 
 public:
 	// Sets default values for this pawn's properties
-	ACompanion();
+	AEnemy();
 
 protected:
 	// Called when the game starts or when spawned
@@ -26,9 +27,15 @@ public:
 	// Called to bind functionality to input
 	virtual void SetupPlayerInputComponent(class UInputComponent* PlayerInputComponent) override;
 
-	float DoSomeDamage();
+	UFUNCTION(BlueprintPure, Category = "Health")
+	float GetHealthAsPercent() const;
+
+	UFUNCTION(BlueprintCallable, Category = "Health")
+	bool DecreaseHealth(float damage);
 
 private:
-	float baseDamage = 35.f;
-
+	UPROPERTY(VisibleAnywhere, Category = "Health")
+	float maxHealth = 100.f;
+	UPROPERTY(VisibleAnywhere, Category = "Health")
+	float currentHealth;
 };

@@ -3,11 +3,12 @@
 #pragma once
 
 #include "CoreMinimal.h"
+#include "GameplayTagAssetInterface.h"
 #include "GameFramework/Character.h"
 #include "AICompanionCharacter.generated.h"
 
 UCLASS(config=Game)
-class AAICompanionCharacter : public ACharacter
+class AAICompanionCharacter : public ACharacter, public IGameplayTagAssetInterface
 {
 	GENERATED_BODY()
 
@@ -61,5 +62,18 @@ public:
 	FORCEINLINE class USpringArmComponent* GetCameraBoom() const { return CameraBoom; }
 	/** Returns FollowCamera subobject **/
 	FORCEINLINE class UCameraComponent* GetFollowCamera() const { return FollowCamera; }
+
+public:
+	UFUNCTION(BlueprintCallable, Category = "Companion Commands")
+	void ClearCommands();
+	UFUNCTION(BlueprintCallable, Category = "Companion Commands")
+	void CommandWait();
+	UFUNCTION(BlueprintCallable, Category = "Companion Commands")
+	void CommandReturn();
+
+	//Gameplay Tags
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "GameplayTags")
+	FGameplayTagContainer gameplayTags;
+	virtual void GetOwnedGameplayTags(FGameplayTagContainer& TagContainer) const override { TagContainer = gameplayTags; return; }
 };
 

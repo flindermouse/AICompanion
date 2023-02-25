@@ -4,6 +4,7 @@
 
 #include "CoreMinimal.h"
 #include "AIController.h"
+
 #include "CompanionController.generated.h"
 
 /**
@@ -14,4 +15,10 @@ class AICOMPANION_API ACompanionController : public AAIController
 {
 	GENERATED_BODY()
 	
+protected:
+	virtual void BeginPlay() override;
+
+private:
+	UPROPERTY(EditAnywhere)
+	class UBehaviorTree* behave;
 };
