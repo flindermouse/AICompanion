@@ -4,20 +4,20 @@
 
 #include "CoreMinimal.h"
 #include "BehaviorTree/Tasks/BTTask_BlackboardBase.h"
-#include "BTT_Stay.generated.h"
+#include "BTT_EndAttack.generated.h"
 
 /**
  * 
  */
 UCLASS()
-class AICOMPANION_API UBTT_Stay : public UBTTask_BlackboardBase
+class AICOMPANION_API UBTT_EndAttack : public UBTTask_BlackboardBase
 {
 	GENERATED_BODY()
 
 public:
-	UBTT_Stay();
+	UBTT_EndAttack();
 
 protected:
 	EBTNodeResult::Type ExecuteTask(UBehaviorTreeComponent &OwnerComp, uint8 *NodeMemory);
-	
+
 };

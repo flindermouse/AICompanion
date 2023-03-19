@@ -9,16 +9,9 @@
 APal::APal(){
  	// Set this character to call Tick() every frame.  You can turn this off to improve performance if you don't need it.
 	PrimaryActorTick.bCanEverTick = true;
-
-	//get the skeletal mesh
-	skelly = GetMesh();
-
-	//set up anim array
-	//anims.Append([attack, sitDown, rest, getUp]);
 }
 
 // Called when the game starts or when spawned
-
 void APal::BeginPlay(){
 	Super::BeginPlay();	
 }
@@ -37,27 +30,6 @@ void APal::SetupPlayerInputComponent(UInputComponent* PlayerInputComponent){
 	PlayerInputComponent->BindAxis(TEXT("MoveRight"), this, &APal::MoveRight);
 }
 
-void APal::AttackAnim(){
-	if(!skelly){
-		UE_LOG(LogTemp, Display, TEXT("skeleton not found (Pal)"));
-		return;
-	}
-	
-	if(!attack) return;
-	skelly->PlayAnimation(attack, false);
-}
-
-void APal::StartDefaultAnim(){
-	if(!skelly){
-		UE_LOG(LogTemp, Display, TEXT("skeleton not found (Pal)"));
-		return;
-	}
-
-	if(!defaultMove) return;
-
-	skelly->SetAnimClass(defaultMove->GetAnimBlueprintGeneratedClass());
-}
-
 float APal::DoSomeDamage(){
 	UE_LOG(LogTemp, Display, TEXT("Attacking!"));
 	return baseDamage;
@@ -72,8 +44,9 @@ void APal::MoveRight(float axis){
 }
 
 void APal::ClearCommands(){
-	StartDefaultAnim();
 	gameplayTags.Reset();
+	SetIsAttacking(false);
+	SetIsWandering(false);
 	EndWait();
 }
 
@@ -89,6 +62,13 @@ void APal::CommandWait(){
 void APal::CommandReturn(){
 	ClearCommands();
 	gameplayTags.AddTag(FGameplayTag::RequestGameplayTag(FName(TEXT("Command.Return"))));
+}
+
+void APal::CommandWander(){
+	ClearCommands();
+
+	SetIsWandering(true);
+	gameplayTags.AddTag(FGameplayTag::RequestGameplayTag(FName(TEXT("Command.Wander"))));
 }
 
 void APal::EndWait(){

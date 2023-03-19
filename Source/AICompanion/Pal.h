@@ -29,11 +29,6 @@ public:
 	virtual void SetupPlayerInputComponent(class UInputComponent* PlayerInputComponent) override;
 
 public:
-	UFUNCTION(BlueprintCallable, Category = "Animation")
-	void AttackAnim();
-	UFUNCTION(BlueprintCallable, Category = "Animation")
-	void StartDefaultAnim();
-
 	UFUNCTION(BlueprintCallable, Category = "Damage")
 	float DoSomeDamage();
 	UFUNCTION(BlueprintPure, Category = "Damage")
@@ -46,25 +41,32 @@ public:
 	UFUNCTION(BlueprintCallable, Category = "Commands")
 	void SetIsWaiting(bool wait) {waiting = wait;}
 
+	UFUNCTION(BlueprintPure, Category = "Commands")
+	bool IsWandering() const {return wandering;}
+	UFUNCTION(BlueprintCallable, Category = "Commands")
+	void SetIsWandering(bool wander) {wandering = wander;}
+
+	UFUNCTION(BlueprintPure, Category = "Commands")
+	bool IsAttacking() const {return attacking;}
+	UFUNCTION(BlueprintCallable, Category = "Commands")
+	void SetIsAttacking(bool attack) {attacking = attack;}
+
+
 private:
 	void MoveForward(float axis);
 	void MoveRight(float axis);
 
 	UPROPERTY(VisibleAnywhere, Category = "Commands")
 	bool waiting = false;
+	UPROPERTY(VisibleAnywhere, Category = "Commands")
+	bool wandering = false;
+	UPROPERTY(VisibleAnywhere, Category = "Commands")
+	bool attacking = false;
 
 	UPROPERTY(VisibleAnywhere, Category = "Damage")
 	float baseDamage = 35.f;
 
-	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Animations",
-		meta = (AllowPrivateAccess = "true"))
-	UAnimationAsset* attack;
-
-	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Animations",
-		meta = (AllowPrivateAccess = "true"))
-	UAnimBlueprint* defaultMove;
-
-	USkeletalMeshComponent* skelly;
+	//for delaying movement restoration after wait command
 	FTimerHandle handle;
 
 public:
@@ -74,6 +76,8 @@ public:
 	void CommandWait();
 	UFUNCTION(BlueprintCallable, Category = "Companion Commands")
 	void CommandReturn();
+	UFUNCTION(BlueprintCallable, Category = "Companion Commands")
+	void CommandWander();
 	UFUNCTION(BlueprintPure, Category = "Companion Commands")
 	bool HasCommand() const {return !gameplayTags.IsEmpty();}
 

@@ -7,7 +7,6 @@
 #include "Enemy.h"
 #include "Pal.h"
 #include "BehaviorTree/BlackboardComponent.h"
-#include "Kismet/GameplayStatics.h"
 
 UBTT_Attack::UBTT_Attack(){
     NodeName = TEXT("Attack");
@@ -42,10 +41,10 @@ EBTNodeResult::Type UBTT_Attack::ExecuteTask(UBehaviorTreeComponent &OwnerComp,
         UE_LOG(LogTemp, Display, TEXT("can't cast enemy (BTT_Attack)"));
         return EBTNodeResult::Failed;
     }
-    
-    pal->AttackAnim();    
+      
+    pal->SetIsAttacking(true); 
     if(enemy->DecreaseHealth(pal->DoSomeDamage())){
-        pal->StartDefaultAnim();
+        pal->SetIsAttacking(false);
         return EBTNodeResult::Failed; // no more enemy, fail to break from sequence 
     }
 
