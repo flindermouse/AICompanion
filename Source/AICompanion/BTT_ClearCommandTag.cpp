@@ -3,7 +3,8 @@
 
 #include "BTT_ClearCommandTag.h"
 
-#include "AICompanionCharacter.h"
+#include "CompanionController.h"
+#include "Pal.h"
 #include "BehaviorTree/BlackboardComponent.h"
 #include "Kismet/GameplayStatics.h"
 
@@ -12,25 +13,23 @@ UBTT_ClearCommandTag::UBTT_ClearCommandTag(){
 }
 
 EBTNodeResult::Type UBTT_ClearCommandTag::ExecuteTask(UBehaviorTreeComponent &OwnerComp, 
-                                    uint8 *NodeMemory){
+                                                        uint8 *NodeMemory){
     Super::ExecuteTask(OwnerComp, NodeMemory); 
 
-    if(OwnerComp.GetBlackboardComponent()){
-        AAICompanionCharacter* player = Cast<AAICompanionCharacter>(OwnerComp.GetBlackboardComponent()->   
-                                            GetValueAsObject(GetSelectedBlackboardKey()));
-        if(player){
-            player->ClearCommands();
-            return EBTNodeResult::Succeeded; // attack succeeded
-            
-        }
-        else{
-            UE_LOG(LogTemp, Display, TEXT("can't cast player (BTT_Clear)"));
-        }
+    if(!OwnerComp.GetAIOwner()) return EBTNodeResult::Failed;
+    
+    ACompanionController* palAI = Cast<ACompanionController>(OwnerComp.GetAIOwner());
+    if(!palAI){
+        UE_LOG(LogTemp, Display, TEXT("can't cast ai controller (BTT_ClearCommandTag)"));
+        return EBTNodeResult::Failed;
     }
-    else{
-        UE_LOG(LogTemp, Display, TEXT("can't get blackboard (BTT_Clear)"));
+    
+    APal* pal = Cast<APal>(palAI->GetPawn());
+    if(!pal){
+        UE_LOG(LogTemp, Display, TEXT("can't cast companion (BTT_ClearCommandTag)"));
+        return EBTNodeResult::Failed;
     }
-            
-
-    return EBTNodeResult::Failed;
+    
+    pal->ClearCommands();
+    return EBTNodeResult::Succeeded;              
 }

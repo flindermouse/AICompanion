@@ -15,8 +15,8 @@ void UBTS_LastPlayerLocation::TickNode(UBehaviorTreeComponent& OwnerComp,
     Super::TickNode(OwnerComp, NodeMemory, DeltaSeconds);
 
     APawn* player = UGameplayStatics::GetPlayerPawn(GetWorld(), 0);
-    if(player){
-        OwnerComp.GetBlackboardComponent()->SetValueAsVector(GetSelectedBlackboardKey(),
-                    player->GetActorLocation());
-    }
+    if(!player) return;
+    
+    OwnerComp.GetBlackboardComponent()->SetValueAsVector(GetSelectedBlackboardKey(),
+                player->GetActorLocation());
 } 

@@ -3,12 +3,11 @@
 #pragma once
 
 #include "CoreMinimal.h"
-#include "GameplayTagAssetInterface.h"
 #include "GameFramework/Character.h"
 #include "AICompanionCharacter.generated.h"
 
 UCLASS(config=Game)
-class AAICompanionCharacter : public ACharacter, public IGameplayTagAssetInterface
+class AAICompanionCharacter : public ACharacter
 {
 	GENERATED_BODY()
 
@@ -46,12 +45,6 @@ protected:
 	 */
 	void LookUpAtRate(float Rate);
 
-	/** Handler for when a touch input begins. */
-	void TouchStarted(ETouchIndex::Type FingerIndex, FVector Location);
-
-	/** Handler for when a touch input stops. */
-	void TouchStopped(ETouchIndex::Type FingerIndex, FVector Location);
-
 protected:
 	// APawn interface
 	virtual void SetupPlayerInputComponent(class UInputComponent* PlayerInputComponent) override;
@@ -62,18 +55,5 @@ public:
 	FORCEINLINE class USpringArmComponent* GetCameraBoom() const { return CameraBoom; }
 	/** Returns FollowCamera subobject **/
 	FORCEINLINE class UCameraComponent* GetFollowCamera() const { return FollowCamera; }
-
-public:
-	UFUNCTION(BlueprintCallable, Category = "Companion Commands")
-	void ClearCommands();
-	UFUNCTION(BlueprintCallable, Category = "Companion Commands")
-	void CommandWait();
-	UFUNCTION(BlueprintCallable, Category = "Companion Commands")
-	void CommandReturn();
-
-	//Gameplay Tags
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "GameplayTags")
-	FGameplayTagContainer gameplayTags;
-	virtual void GetOwnedGameplayTags(FGameplayTagContainer& TagContainer) const override { TagContainer = gameplayTags; return; }
 };
 

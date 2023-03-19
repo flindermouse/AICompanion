@@ -75,6 +75,16 @@
 		"directory": "C:\\Program Files\\Epic Games\\UE_5.0\\Engine\\Source"
 	},
 	{
+		"file": "C:\\Users\\flour\\Documents\\Unreal Projects\\AICompanion\\Source\\AICompanion\\BTT_ApplyAnimationBP.cpp",
+		"command": "\"C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.34.31933\\bin\\HostX64\\x64\\cl.exe\" @\"C:\\Users\\flour\\Documents\\Unreal Projects\\AICompanion\\.vscode\\compileCommands_AICompanion\\AICompanion.211.rsp\"",
+		"directory": "C:\\Program Files\\Epic Games\\UE_5.0\\Engine\\Source"
+	},
+	{
+		"file": "C:\\Users\\flour\\Documents\\Unreal Projects\\AICompanion\\Source\\AICompanion\\BTT_ApplyAnimationBP.h",
+		"command": "\"C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.34.31933\\bin\\HostX64\\x64\\cl.exe\" @\"C:\\Users\\flour\\Documents\\Unreal Projects\\AICompanion\\.vscode\\compileCommands_AICompanion\\AICompanion.211.rsp\"",
+		"directory": "C:\\Program Files\\Epic Games\\UE_5.0\\Engine\\Source"
+	},
+	{
 		"file": "C:\\Users\\flour\\Documents\\Unreal Projects\\AICompanion\\Source\\AICompanion\\BTT_Attack.cpp",
 		"command": "\"C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.34.31933\\bin\\HostX64\\x64\\cl.exe\" @\"C:\\Users\\flour\\Documents\\Unreal Projects\\AICompanion\\.vscode\\compileCommands_AICompanion\\AICompanion.211.rsp\"",
 		"directory": "C:\\Program Files\\Epic Games\\UE_5.0\\Engine\\Source"
@@ -91,6 +101,26 @@
 	},
 	{
 		"file": "C:\\Users\\flour\\Documents\\Unreal Projects\\AICompanion\\Source\\AICompanion\\BTT_ClearCommandTag.h",
+		"command": "\"C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.34.31933\\bin\\HostX64\\x64\\cl.exe\" @\"C:\\Users\\flour\\Documents\\Unreal Projects\\AICompanion\\.vscode\\compileCommands_AICompanion\\AICompanion.211.rsp\"",
+		"directory": "C:\\Program Files\\Epic Games\\UE_5.0\\Engine\\Source"
+	},
+	{
+		"file": "C:\\Users\\flour\\Documents\\Unreal Projects\\AICompanion\\Source\\AICompanion\\BTT_Stay.cpp",
+		"command": "\"C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.34.31933\\bin\\HostX64\\x64\\cl.exe\" @\"C:\\Users\\flour\\Documents\\Unreal Projects\\AICompanion\\.vscode\\compileCommands_AICompanion\\AICompanion.211.rsp\"",
+		"directory": "C:\\Program Files\\Epic Games\\UE_5.0\\Engine\\Source"
+	},
+	{
+		"file": "C:\\Users\\flour\\Documents\\Unreal Projects\\AICompanion\\Source\\AICompanion\\BTT_Stay.h",
+		"command": "\"C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.34.31933\\bin\\HostX64\\x64\\cl.exe\" @\"C:\\Users\\flour\\Documents\\Unreal Projects\\AICompanion\\.vscode\\compileCommands_AICompanion\\AICompanion.211.rsp\"",
+		"directory": "C:\\Program Files\\Epic Games\\UE_5.0\\Engine\\Source"
+	},
+	{
+		"file": "C:\\Users\\flour\\Documents\\Unreal Projects\\AICompanion\\Source\\AICompanion\\BTT_StopWait.cpp",
+		"command": "\"C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.34.31933\\bin\\HostX64\\x64\\cl.exe\" @\"C:\\Users\\flour\\Documents\\Unreal Projects\\AICompanion\\.vscode\\compileCommands_AICompanion\\AICompanion.211.rsp\"",
+		"directory": "C:\\Program Files\\Epic Games\\UE_5.0\\Engine\\Source"
+	},
+	{
+		"file": "C:\\Users\\flour\\Documents\\Unreal Projects\\AICompanion\\Source\\AICompanion\\BTT_StopWait.h",
 		"command": "\"C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.34.31933\\bin\\HostX64\\x64\\cl.exe\" @\"C:\\Users\\flour\\Documents\\Unreal Projects\\AICompanion\\.vscode\\compileCommands_AICompanion\\AICompanion.211.rsp\"",
 		"directory": "C:\\Program Files\\Epic Games\\UE_5.0\\Engine\\Source"
 	},
@@ -121,6 +151,16 @@
 	},
 	{
 		"file": "C:\\Users\\flour\\Documents\\Unreal Projects\\AICompanion\\Source\\AICompanion\\Enemy.h",
+		"command": "\"C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.34.31933\\bin\\HostX64\\x64\\cl.exe\" @\"C:\\Users\\flour\\Documents\\Unreal Projects\\AICompanion\\.vscode\\compileCommands_AICompanion\\AICompanion.211.rsp\"",
+		"directory": "C:\\Program Files\\Epic Games\\UE_5.0\\Engine\\Source"
+	},
+	{
+		"file": "C:\\Users\\flour\\Documents\\Unreal Projects\\AICompanion\\Source\\AICompanion\\Pal.cpp",
+		"command": "\"C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.34.31933\\bin\\HostX64\\x64\\cl.exe\" @\"C:\\Users\\flour\\Documents\\Unreal Projects\\AICompanion\\.vscode\\compileCommands_AICompanion\\AICompanion.211.rsp\"",
+		"directory": "C:\\Program Files\\Epic Games\\UE_5.0\\Engine\\Source"
+	},
+	{
+		"file": "C:\\Users\\flour\\Documents\\Unreal Projects\\AICompanion\\Source\\AICompanion\\Pal.h",
 		"command": "\"C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.34.31933\\bin\\HostX64\\x64\\cl.exe\" @\"C:\\Users\\flour\\Documents\\Unreal Projects\\AICompanion\\.vscode\\compileCommands_AICompanion\\AICompanion.211.rsp\"",
 		"directory": "C:\\Program Files\\Epic Games\\UE_5.0\\Engine\\Source"
 	}

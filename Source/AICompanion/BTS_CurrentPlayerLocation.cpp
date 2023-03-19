@@ -16,15 +16,14 @@ void UBTS_CurrentPlayerLocation::TickNode(UBehaviorTreeComponent& OwnerComp, uin
     Super::TickNode(OwnerComp, NodeMemory, DeltaSeconds);    
 
     APawn* player = UGameplayStatics::GetPlayerPawn(GetWorld(), 0);
-    if(player){
-        if(OwnerComp.GetAIOwner()){
-            if(OwnerComp.GetAIOwner()->LineOfSightTo(player)){
-                OwnerComp.GetBlackboardComponent()->SetValueAsObject(GetSelectedBlackboardKey(), player);
-            }
-            else{
-                OwnerComp.GetBlackboardComponent()->ClearValue(GetSelectedBlackboardKey());
-            }
-        }   
-        
+    if(!player) return;
+    
+    if(!OwnerComp.GetAIOwner()) return;
+    
+    if(OwnerComp.GetAIOwner()->LineOfSightTo(player)){
+        OwnerComp.GetBlackboardComponent()->SetValueAsObject(GetSelectedBlackboardKey(), player);
     }
+    else{
+        OwnerComp.GetBlackboardComponent()->ClearValue(GetSelectedBlackboardKey());
+    }  
 }

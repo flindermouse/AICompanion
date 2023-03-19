@@ -12,8 +12,7 @@
 //////////////////////////////////////////////////////////////////////////
 // AAICompanionCharacter
 
-AAICompanionCharacter::AAICompanionCharacter()
-{
+AAICompanionCharacter::AAICompanionCharacter(){
 	// Set size for collision capsule
 	GetCapsuleComponent()->InitCapsuleSize(42.f, 96.0f);
 
@@ -47,16 +46,12 @@ AAICompanionCharacter::AAICompanionCharacter()
 	FollowCamera = CreateDefaultSubobject<UCameraComponent>(TEXT("FollowCamera"));
 	FollowCamera->SetupAttachment(CameraBoom, USpringArmComponent::SocketName); // Attach the camera to the end of the boom and let the boom adjust to match the controller orientation
 	FollowCamera->bUsePawnControlRotation = false; // Camera does not rotate relative to arm
-
-	// Note: The skeletal mesh and anim blueprint references on the Mesh component (inherited from Character) 
-	// are set in the derived blueprint asset named ThirdPersonCharacter (to avoid direct content references in C++)
 }
 
 //////////////////////////////////////////////////////////////////////////
 // Input
 
-void AAICompanionCharacter::SetupPlayerInputComponent(class UInputComponent* PlayerInputComponent)
-{
+void AAICompanionCharacter::SetupPlayerInputComponent(class UInputComponent* PlayerInputComponent){
 	// Set up gameplay key bindings
 	check(PlayerInputComponent);
 	PlayerInputComponent->BindAction("Jump", IE_Pressed, this, &ACharacter::Jump);
@@ -72,36 +67,20 @@ void AAICompanionCharacter::SetupPlayerInputComponent(class UInputComponent* Pla
 	PlayerInputComponent->BindAxis("Turn Right / Left Gamepad", this, &AAICompanionCharacter::TurnAtRate);
 	PlayerInputComponent->BindAxis("Look Up / Down Mouse", this, &APawn::AddControllerPitchInput);
 	PlayerInputComponent->BindAxis("Look Up / Down Gamepad", this, &AAICompanionCharacter::LookUpAtRate);
-
-	// handle touch devices
-	PlayerInputComponent->BindTouch(IE_Pressed, this, &AAICompanionCharacter::TouchStarted);
-	PlayerInputComponent->BindTouch(IE_Released, this, &AAICompanionCharacter::TouchStopped);
 }
 
-void AAICompanionCharacter::TouchStarted(ETouchIndex::Type FingerIndex, FVector Location)
-{
-	Jump();
-}
 
-void AAICompanionCharacter::TouchStopped(ETouchIndex::Type FingerIndex, FVector Location)
-{
-	StopJumping();
-}
-
-void AAICompanionCharacter::TurnAtRate(float Rate)
-{
+void AAICompanionCharacter::TurnAtRate(float Rate){
 	// calculate delta for this frame from the rate information
 	AddControllerYawInput(Rate * TurnRateGamepad * GetWorld()->GetDeltaSeconds());
 }
 
-void AAICompanionCharacter::LookUpAtRate(float Rate)
-{
+void AAICompanionCharacter::LookUpAtRate(float Rate){
 	// calculate delta for this frame from the rate information
 	AddControllerPitchInput(Rate * TurnRateGamepad * GetWorld()->GetDeltaSeconds());
 }
 
-void AAICompanionCharacter::MoveForward(float Value)
-{
+void AAICompanionCharacter::MoveForward(float Value){
 	if ((Controller != nullptr) && (Value != 0.0f))
 	{
 		// find out which way is forward
@@ -114,8 +93,7 @@ void AAICompanionCharacter::MoveForward(float Value)
 	}
 }
 
-void AAICompanionCharacter::MoveRight(float Value)
-{
+void AAICompanionCharacter::MoveRight(float Value){
 	if ( (Controller != nullptr) && (Value != 0.0f) )
 	{
 		// find out which way is right
@@ -127,19 +105,4 @@ void AAICompanionCharacter::MoveRight(float Value)
 		// add movement in that direction
 		AddMovementInput(Direction, Value);
 	}
-}
-
-void AAICompanionCharacter::ClearCommands(){
-	Tags.Empty();
-}
-
-void AAICompanionCharacter::CommandWait(){
-		
-	Tags.Empty();
-	Tags.Add(FName("Wait"));
-}
-
-void AAICompanionCharacter::CommandReturn(){
-	Tags.Empty();
-	Tags.Add(FName("Return"));
 }

@@ -23,12 +23,24 @@ public:
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;
 
-	// Called to bind functionality to input
-	virtual void SetupPlayerInputComponent(class UInputComponent* PlayerInputComponent) override;
-
+public:
+	UFUNCTION(BlueprintCallable, Category = "Action")
+	void AttackAction();
+	UFUNCTION(BlueprintCallable, Category = "Damage")
 	float DoSomeDamage();
+	UFUNCTION(BlueprintPure, Category = "Damage")
+	float GetBaseDamage() const {return baseDamage;}
+	UFUNCTION(BluePrintCallable, Category = "Damage")
+	void SetBaseDamage(float newBase) {baseDamage = newBase;}
 
 private:
-	float baseDamage = 35.f;
+	UPROPERTY(VisibleAnywhere, BlueprintReadWrite, 
+		Category = "Components", meta = (AllowPrivateAccess = "true"))
+	class UBoxComponent* boxComp;
+	UPROPERTY(VisibleAnywhere, BlueprintReadWrite, 
+		Category = "Components", meta = (AllowPrivateAccess = "true"))
+	UStaticMeshComponent* mesh;
 
+	UPROPERTY(VisibleAnywhere, Category = "Damage")
+	float baseDamage = 35.f;
 };

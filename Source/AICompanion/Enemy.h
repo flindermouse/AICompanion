@@ -24,12 +24,10 @@ public:
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;
 
-	// Called to bind functionality to input
-	virtual void SetupPlayerInputComponent(class UInputComponent* PlayerInputComponent) override;
-
 	UFUNCTION(BlueprintPure, Category = "Health")
 	float GetHealthAsPercent() const;
 
+	// returns true if this kills the enemy
 	UFUNCTION(BlueprintCallable, Category = "Health")
 	bool DecreaseHealth(float damage);
 

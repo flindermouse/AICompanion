@@ -72,3 +72,9 @@ Plugins/*/Intermediate/*
 
 # Cache files for the editor to use
 DerivedDataCache/*
+
+# unnecessary assets
+Content/AnimalVarietyPack/Crow
+Content/AnimalVarietyPack/DeerStagAndDoe
+Content/AnimalVarietyPack/Fox
+Content/AnimalVarietyPack/Wolf

@@ -15,7 +15,6 @@ void UBTS_CurrentEnemyLocation::TickNode(UBehaviorTreeComponent& OwnerComp, uint
 					        float DeltaSeconds){
     Super::TickNode(OwnerComp, NodeMemory, DeltaSeconds);    
 
-
     FVector startP = OwnerComp.GetAIOwner()->GetPawn()->GetActorLocation();
 	FVector endP = startP + UGameplayStatics::GetPlayerPawn(GetWorld(), 0)->GetActorForwardVector() * 750; 
 	//DrawDebugLine(GetWorld(), startP, endP, FColor::Red, false, 2.f, (uint8)0U, 12.f);
@@ -25,7 +24,6 @@ void UBTS_CurrentEnemyLocation::TickNode(UBehaviorTreeComponent& OwnerComp, uint
     FHitResult hitRes;
     bool hasHit = GetWorld()->SweepSingleByChannel(hitRes, startP, endP, 
 								FQuat::Identity, ECC_GameTraceChannel1, sphere);
-
 
     if(hasHit){
         UE_LOG(LogTemp, Display, TEXT("enemy found!"));
