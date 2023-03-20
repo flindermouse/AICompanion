@@ -4,8 +4,8 @@
 #include "BTS_PickupLocation.h"
 
 #include "AIController.h"
+#include "Pal.h"
 #include "BehaviorTree/BlackboardComponent.h"
-#include "Kismet/GameplayStatics.h"
 
 UBTS_PickupLocation::UBTS_PickupLocation(){
     NodeName = TEXT("update pickup location");
@@ -16,10 +16,12 @@ void UBTS_PickupLocation::TickNode(UBehaviorTreeComponent& OwnerComp, uint8* Nod
     Super::TickNode(OwnerComp, NodeMemory, DeltaSeconds);    
 
     if(!OwnerComp.GetAIOwner()) return;
-    if(!OwnerComp.GetAIOwner()->GetPawn()) return;
 
-    FVector startP = OwnerComp.GetAIOwner()->GetPawn()->GetActorLocation();
-	FVector endP = startP + UGameplayStatics::GetPlayerPawn(GetWorld(), 0)->GetActorForwardVector() * 1000; 
+    APal* pal = Cast<APal>(OwnerComp.GetAIOwner()->GetPawn());
+    if(!pal) return;
+
+    FVector startP = pal->GetActorLocation();
+	FVector endP = startP + pal->GetActorForwardVector() * 1000; 
 
 	FCollisionShape sphere = FCollisionShape::MakeSphere(150);
     FHitResult hitRes;

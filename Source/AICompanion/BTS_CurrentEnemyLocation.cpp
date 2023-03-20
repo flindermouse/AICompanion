@@ -4,19 +4,24 @@
 #include "BTS_CurrentEnemyLocation.h"
 
 #include "AIController.h"
+#include "Pal.h"
 #include "BehaviorTree/BlackboardComponent.h"
-#include "Kismet/GameplayStatics.h"
 
 UBTS_CurrentEnemyLocation::UBTS_CurrentEnemyLocation(){
     NodeName = TEXT("update current enemy location");
 }
 
 void UBTS_CurrentEnemyLocation::TickNode(UBehaviorTreeComponent& OwnerComp, uint8* NodeMemory, 
-					        float DeltaSeconds){
+					                        float DeltaSeconds){
     Super::TickNode(OwnerComp, NodeMemory, DeltaSeconds);    
 
-    FVector startP = OwnerComp.GetAIOwner()->GetPawn()->GetActorLocation();
-	FVector endP = startP + UGameplayStatics::GetPlayerPawn(GetWorld(), 0)->GetActorForwardVector() * 1000; 
+    if(!OwnerComp.GetAIOwner()) return;
+
+    APal* pal = Cast<APal>(OwnerComp.GetAIOwner()->GetPawn());
+    if(!pal) return;
+
+    FVector startP = pal->GetActorLocation();
+	FVector endP = startP + pal->GetActorForwardVector() * 1000; 
 	//DrawDebugLine(GetWorld(), startP, endP, FColor::Red, false, 2.f, (uint8)0U, 12.f);
     //DrawDebugSphere(GetWorld(), endP, 100, 12, FColor::Red);
 
